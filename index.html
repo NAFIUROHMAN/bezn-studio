@@ -4,114 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bezn Studio - Solusi kreatif untuk identitas digital Anda dari desain hingga digitalisasi">
-    <title>Bezn Studio | Portfolio Kreatif Digital</title>
+    <title>Bezn Studio | IT & Digitalisasi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header id="main-header">
+        <img src="logo/logo-bezn.png" alt="Bezn Studio" class="header-logo">
+        <h2 class="header-title">Bezn Studio</h2>
+    </header>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
+                <img src="logo/logo-cover.png" alt="Logo cover Bezn">
             <h1>Bangun Identitas Digitalmu Bersama Bezn Studio</h1>
             <p class="subheadline">Solusi kreatif dari desain hingga digitalisasi</p>
-            <a href="https://wa.me/6281234567890" class="cta-button">Konsultasi Sekarang</a>
+            <a href="https://wa.me/6285189643588" class="cta-button">Konsultasi Sekarang</a>
         </div>
         <div class="hero-pattern"></div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section class="about-brief">
+        <div class="about-container">
+            <h2 class="section-title">Tentang Kami</h2>
+            <p class="about-content">
+                Bezn Studio adalah studio kreatif yang berfokus pada solusi digital lengkap untuk bisnis Anda. 
+                Dari desain hingga implementasi, kami membantu merek Anda bersinar di dunia digital.
+            </p>
+            
+            <div class="vision-mission-grid">
+                <div class="vision">
+                    <h3>Visi</h3>
+                    <p>Menjadi mitra terpercaya dalam transformasi digital bisnis di Indonesia dengan solusi kreatif yang inovatif.</p>
+                </div>
+                
+                <div class="mission">
+                    <h3>Misi</h3>
+                    <p>Memberikan solusi digital terbaik melalui pendekatan kreatif, teknis yang solid, dan pemahaman mendalam tentang kebutuhan bisnis klien.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section class="portfolio-section">
-        <div class="container">
-            <h2 class="section-title">Proyek Unggulan Kami</h2>
-            
-            <!-- Filter Kategori -->
-            <div class="portfolio-filter">
-                <button class="filter-btn active" data-category="all">Semua</button>
-                <button class="filter-btn" data-category="videography">Videografi</button>
-                <button class="filter-btn" data-category="photography">Fotografi</button>
-                <button class="filter-btn" data-category="design">Desain Grafis</button>
-                <button class="filter-btn" data-category="bundling">Paket Bundling</button>
+    <!-- Portfolio Section -->
+<section class="portfolio-section">
+    <div class="container">
+        <h2 class="section-title">Proyek Unggulan Kami</h2>
+        
+        <!-- Filter Kategori -->
+        <div class="portfolio-filter">
+            <button class="filter-btn" data-category="videography">Videografi</button>
+            <button class="filter-btn" data-category="photography">Fotografi</button>
+            <button class="filter-btn" data-category="design">Desain Grafis</button>
+        </div>
+        
+        <!-- Grid Portofolio -->
+        <div class="portfolio-grid">
+            <!-- Item 1 - Videografi -->
+            <div class="portfolio-card" data-category="videography">
+                <div class="card-image">
+                    <div class="video-thumbnail">
+                        <video src="portfolio-video">
+                            <source src="portofolio/video/1.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <span class="category-badge">Videografi</span>
+                </div>
+                <div class="card-info">
+                    <h3>Video Company Profile</h3>
+                    <p>PT Maju Jaya Abadi</p>
+                    <button class="view-details">Lihat Detail</button>
+                </div>
+                
+                <!-- Video Modal -->
+                <div class="video-modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div class="video-container">
+                            <video controls autoplay>
+                                <source src="portofolio/video/1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-details">
+                            <h3>Video Company Profile</h3>
+                            <p>PT Maju Jaya Abadi</p>
+                            <p>Video company profile lengkap dengan wawancara, showcase produk, dan budaya perusahaan.</p>
+                            <a href="https://wa.me/6285198643588?text=Saya%20tertarik%20dengan%20video%20company%20profile" class="cta-button">Konsultasi Proyek Serupa</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <!-- Grid Portofolio -->
-            <div class="portfolio-grid">
-                <!-- Item 1 - Videografi -->
-                <div class="portfolio-card" data-category="videography">
-                    <div class="card-image">
-                        <img src="https://source.unsplash.com/random/600x400/?video,production" alt="Proyek Videografi">
-                        <span class="category-badge">Videografi</span>
+            <!-- Item 2 - Videografi -->
+            <div class="portfolio-card" data-category="videography">
+                <div class="card-image">
+                    <div class="video-thumbnail">
+                        <video muted loop class="portfolio-video">
+                            <source src="portofolio/video/1.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
                     </div>
-                    <div class="card-info">
-                        <h3>Video Company Profile</h3>
-                        <p>PT Maju Jaya Abadi</p>
-                    </div>
+                    <span class="category-badge">Videografi</span>
+                </div>
+                <div class="card-info">
+                    <h3>Video Iklan Produk</h3>
+                    <p>Tech Gadgets</p>
+                    <button class="view-details">Lihat Detail</button>
                 </div>
                 
-                <!-- Item 2 - Fotografi -->
-                <div class="portfolio-card" data-category="photography">
-                    <div class="card-image">
-                        <img src="https://source.unsplash.com/random/600x400/?photo,product" alt="Proyek Fotografi">
-                        <span class="category-badge">Fotografi</span>
-                    </div>
-                    <div class="card-info">
-                        <h3>Foto Produk Makanan</h3>
-                        <p>Healthy Bites</p>
-                    </div>
-                </div>
-                
-                <!-- Item 3 - Fotografi -->
-                <div class="portfolio-card" data-category="photography">
-                    <div class="card-image">
-                        <img src="https://source.unsplash.com/random/600x400/?portrait,photography" alt="Proyek Fotografi">
-                        <span class="category-badge">Fotografi</span>
-                    </div>
-                    <div class="card-info">
-                        <h3>Sesi Foto Portrait</h3>
-                        <p>Creative Agency</p>
+                <!-- Video Modal -->
+                <div class="video-modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <div class="video-container">
+                            <video controls autoplay>
+                                <source src="portofolio/video/2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-details">
+                            <h3>Video Iklan Produk</h3>
+                            <p>Tech Gadgets</p>
+                            <p>Video iklan 30 detik untuk produk gadget terbaru dengan animasi 3D.</p>
+                            <a href="https://wa.me/6285198643588?text=Saya%20tertarik%20dengan%20video%20iklan%20produk" class="cta-button">Konsultasi Proyek Serupa</a>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Item 4 - Desain Grafis -->
-                <div class="portfolio-card" data-category="design">
-                    <div class="card-image">
-                        <img src="https://source.unsplash.com/random/600x400/?logo,design" alt="Proyek Desain">
-                        <span class="category-badge">Desain Grafis</span>
-                    </div>
-                    <div class="card-info">
-                        <h3>Desain Logo</h3>
-                        <p>Kafe Santai</p>
-                    </div>
+            </div>
+            
+            <!-- Item 3 - Fotografi -->
+            <div class="portfolio-card" data-category="photography">
+                <div class="card-image">
+                    <img src="portofolio/foto/1.jpg" alt="Proyek Fotografi">
+                    <span class="category-badge">Fotografi</span>
                 </div>
-                
-                <!-- Item 5 - Bundling -->
-                <div class="portfolio-card" data-category="bundling">
-                    <div class="card-image">
-                        <img src="https://source.unsplash.com/random/600x400/?branding,package" alt="Paket Bundling">
-                        <span class="category-badge">Paket Bundling</span>
-                    </div>
-                    <div class="card-info">
-                        <h3>Paket Digital Lengkap</h3>
-                        <p>Bella Florist</p>
-                    </div>
+                <div class="card-info">
+                    <h3>Foto Produk Makanan</h3>
+                    <p>Healthy Bites</p>
+                    <button class="view-details">Lihat Detail</button>
                 </div>
-                
-                <!-- Item 6 - Videografi -->
-                <div class="portfolio-card" data-category="videography">
-                    <div class="card-image">
-                        <img src="https://source.unsplash.com/random/600x400/?video,advertisement" alt="Proyek Videografi">
-                        <span class="category-badge">Videografi</span>
-                    </div>
-                    <div class="card-info">
-                        <h3>Video Iklan Produk</h3>
-                        <p>Tech Gadgets</p>
-                    </div>
+            </div>
+            
+            <!-- Item 4 - Desain Grafis -->
+            <div class="portfolio-card" data-category="design">
+                <div class="card-image">
+                    <img src="portofolio/design/1.jpg" alt="Proyek Desain">
+                    <span class="category-badge">Desain Grafis</span>
+                </div>
+                <div class="card-info">
+                    <h3>Desain Logo</h3>
+                    <p>Kafe Santai</p>
+                    <button class="view-details">Lihat Detail</button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     <!-- Middle CTA -->
     <section class="middle-cta">
         <div class="container">
