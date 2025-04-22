@@ -1,0 +1,315 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Scroll Animation
+    const scrollElements = document.querySelectorAll('[data-scroll]');
+    
+    const elementInView = (el) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (
+            elementTop <= (window.innerHeight || document.documentElement.clientHeight) * 0.75
+        );
+    };
+    
+    const displayScrollElement = (element) => {
+        element.classList.add('is-visible');
+    };
+    
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el)) {
+                displayScrollElement(el);
+            }
+        });
+    };
+    
+    // Initialize scroll animations on load
+    handleScrollAnimation();
+    
+    // Mission Slider
+    const missionSlides = document.querySelector('.mission-slides');
+    const missionDots = document.querySelectorAll('.mission-dot');
+    let currentMissionSlide = 0;
+    
+    function showMissionSlide(index) {
+        missionSlides.style.transform = `translateX(-${index * 100}%)`;
+        
+        // Update dots
+        missionDots.forEach(dot => dot.classList.remove('active'));
+        missionDots[index].classList.add('active');
+        
+        currentMissionSlide = index;
+    }
+    
+    // Mission dot click event
+    missionDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showMissionSlide(index);
+        });
+    });
+    
+    // Auto slide mission
+    let missionInterval = setInterval(() => {
+        currentMissionSlide = (currentMissionSlide + 1) % missionDots.length;
+        showMissionSlide(currentMissionSlide);
+    }, 5000);
+    
+    // Pause on hover
+    const missionSlider = document.querySelector('.mission-slider');
+    missionSlider.addEventListener('mouseenter', () => {
+        clearInterval(missionInterval);
+    });
+    
+    missionSlider.addEventListener('mouseleave', () => {
+        missionInterval = setInterval(() => {
+            currentMissionSlide = (currentMissionSlide + 1) % missionDots.length;
+            showMissionSlide(currentMissionSlide);
+        }, 5000);
+    });
+    
+    // Packages Slider
+    const packagesSlides = document.querySelector('.packages-slides');
+    const packageSlides = document.querySelectorAll('.package-slide');
+    const prevBtn = document.querySelector('.slider-prev');
+    const nextBtn = document.querySelector('.slider-next');
+    const dotsContainer = document.querySelector('.slider-dots');
+    let currentSlide = 0;
+    
+    // Create dots
+    packageSlides.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.classList.add('slider-dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+            goToSlide(index);
+        });
+        dotsContainer.appendChild(dot);
+    });
+    
+    const dots = document.querySelectorAll('.slider-dots .slider-dot');
+    
+    function goToSlide(index) {
+        packagesSlides.style.transform = `translateX(-${index * 100}%)`;
+        
+        // Update dots
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[index].classList.add('active');
+        
+        currentSlide = index;
+    }
+    
+    // Next slide
+    nextBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % packageSlides.length;
+        goToSlide(currentSlide);
+    });
+    
+    // Previous slide
+    prevBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + packageSlides.length) % packageSlides.length;
+        goToSlide(currentSlide);
+    });
+    
+    // Auto slide packages
+    let packagesInterval = setInterval(() => {
+        currentSlide = (currentSlide + 1) % packageSlides.length;
+        goToSlide(currentSlide);
+    }, 6000);
+    
+    // Pause on hover
+    const packagesSlider = document.querySelector('.packages-slider');
+    packagesSlider.addEventListener('mouseenter', () => {
+        clearInterval(packagesInterval);
+    });
+    
+    packagesSlider.addEventListener('mouseleave', () => {
+        packagesInterval = setInterval(() => {
+            currentSlide = (currentSlide + 1) % packageSlides.length;
+            goToSlide(currentSlide);
+        }, 6000);
+    });
+    
+    // Portfolio Filter
+    const filterButtons = document.querySelectorAll('.filter-btn');
+const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+// Tampilkan semua card secara default saat halaman dimuat
+window.addEventListener('DOMContentLoaded', () => {
+    portfolioCards.forEach(card => {
+        card.style.display = 'block';
+        card.classList.add('visible');
+    });
+    
+    // Aktifkan tombol 'all' secara default
+    document.querySelector('.filter-btn[data-category="all"]').classList.add('active');
+});
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        const category = button.dataset.category;
+        
+        portfolioCards.forEach(card => {
+            if (category === 'all' || card.dataset.category === category) {
+                card.style.display = 'block';
+                setTimeout(() => {
+                    card.classList.add('visible');
+                }, 50);
+            } else {
+                card.classList.remove('visible');
+                setTimeout(() => {
+                    card.style.display = 'none';
+                }, 300);
+            }
+        });
+    });
+});
+    
+    // Video Modal Functionality
+    const videoModal = document.querySelector('.video-modal');
+    const closeModal = document.querySelector('.close-modal');
+    const modalVideo = videoModal.querySelector('video');
+    const videoTitle = videoModal.querySelector('.video-title');
+    const videoClient = videoModal.querySelector('.video-client');
+    const videoDesc = videoModal.querySelector('.video-description');
+    
+    // Play video when clicking thumbnail
+    document.querySelectorAll('.video-thumbnail').forEach(thumbnail => {
+        thumbnail.addEventListener('click', function() {
+            const video = this.querySelector('video');
+            const videoSrc = video.querySelector('source').src;
+            
+            modalVideo.querySelector('source').src = videoSrc;
+            modalVideo.load();
+            
+            const cardInfo = this.closest('.portfolio-card').querySelector('.card-info');
+            videoTitle.textContent = cardInfo.querySelector('h3').textContent;
+            videoClient.textContent = cardInfo.querySelector('p').textContent;
+            
+            videoModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Auto play video when modal opens
+            modalVideo.play().catch(e => console.log('Autoplay prevented:', e));
+        });
+    });
+    
+    // View Details button for image projects
+    document.querySelectorAll('.view-details').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const card = this.closest('.portfolio-card');
+            
+            if (card.querySelector('.card-image img')) {
+                // For image projects
+                const imgSrc = card.querySelector('.card-image img').src;
+                
+                videoModal.querySelector('.video-container').innerHTML = `
+                    <img src="${imgSrc}" alt="Project Image" style="width:100%; border-radius:10px 10px 0 0">
+                `;
+                
+                videoTitle.textContent = card.querySelector('.card-info h3').textContent;
+                videoClient.textContent = card.querySelector('.card-info p').textContent;
+                videoDesc.textContent = "Deskripsi lengkap proyek ini akan ditampilkan di sini.";
+                
+                videoModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+    
+    // Close modal
+    closeModal.addEventListener('click', () => {
+        videoModal.classList.remove('active');
+        modalVideo.pause();
+        document.body.style.overflow = 'auto';
+    });
+    
+    // Close modal when clicking outside
+    videoModal.addEventListener('click', (e) => {
+        if (e.target === videoModal) {
+            videoModal.classList.remove('active');
+            modalVideo.pause();
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // Header scroll effect
+    const header = document.getElementById('main-header');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled')
+        }
+    });
+
+    const scrollDown = document.querySelector('.scroll-down');
+    if (scrollDown){
+        scrollDown.addEventListener('click', function(){
+            window.scrollTo({top: window.innerHeight, behavior: 'smooth'});
+        });
+    }
+    
+    // Form submission
+    const contactForm = document.getElementById('contact-form');
+    
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form values
+        const formData = {
+            name: this.name.value,
+            email: this.email.value,
+            phone: this.phone.value,
+            message: this.message.value
+        };
+        
+        // Here you would normally send the form data to a server
+        // For demo purposes, we'll just show an alert
+        alert(`Terima kasih ${formData.name}! Pesan Anda telah terkirim. Kami akan segera menghubungi Anda via WhatsApp.`);
+        
+        // Reset form
+        this.reset();
+        
+        // Remove focus from all inputs
+        document.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
+            input.blur();
+        });
+        
+        // Reset labels
+        document.querySelectorAll('.form-group label').forEach(label => {
+            label.style.top = '15px';
+            label.style.left = '45px';
+            label.style.fontSize = '1rem';
+            label.style.color = 'var(--secondary)';
+            label.style.background = 'transparent';
+            label.style.padding = '0';
+        });
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Scroll event listener
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
+    });
+});

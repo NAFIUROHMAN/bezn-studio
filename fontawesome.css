@@ -1,0 +1,78 @@
+/*!
+ * Font Awesome Free 6.0.0-beta3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+ @font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src: url("../webfonts/fa-solid-900.woff2") format("woff2"), 
+         url("../webfonts/fa-solid-900.ttf") format("truetype"); 
+  }
+  
+  .fas,
+  .fa-solid {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+  }
+  
+  .fa-bars:before {
+    content: "\f0c9";
+  }
+  
+  .fa-chevron-down:before {
+    content: "\f078";
+  }
+  
+  .fa-chevron-left:before {
+    content: "\f053";
+  }
+  
+  .fa-chevron-right:before {
+    content: "\f054";
+  }
+  
+  .fa-check:before {
+    content: "\f00c";
+  }
+  
+  .fa-user:before {
+    content: "\f007";
+  }
+  
+  .fa-envelope:before {
+    content: "\f0e0";
+  }
+  
+  .fa-phone:before {
+    content: "\f095";
+  }
+  
+  .fa-comment-dots:before {
+    content: "\f4ad";
+  }
+  
+  .fa-play:before {
+    content: "\f04b";
+  }
+  
+  .fa-whatsapp:before {
+    content: "\f232";
+  }
+  
+  .fa-instagram:before {
+    content: "\f16d";
+  }
+  
+  .fa-linkedin:before {
+    content: "\f08c";
+  }
+  
+  .fa-dribbble:before {
+    content: "\f17d";
+  }
+  
+  .fa-times:before {
+    content: "\f00d";
+  }
