@@ -224,7 +224,7 @@ body {
 
 .section-title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 3rem;
     color: var(--primary);
     position: relative;
@@ -249,7 +249,7 @@ body {
 }
 
 .vision-mission-container {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fit, minimax(300px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
@@ -298,8 +298,8 @@ body {
   }
   
   .mission-dot {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background-color: #CBD5E0;
     cursor: pointer;
