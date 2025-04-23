@@ -129,43 +129,43 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Portfolio Filter
     const filterButtons = document.querySelectorAll('.filter-btn');
-const portfolioCards = document.querySelectorAll('.portfolio-card');
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
 
-// Tampilkan semua card secara default saat halaman dimuat
-window.addEventListener('DOMContentLoaded', () => {
-    portfolioCards.forEach(card => {
-        card.style.display = 'block';
-        card.classList.add('visible');
-    });
-    
-    // Aktifkan tombol 'all' secara default
-    document.querySelector('.filter-btn[data-category="all"]').classList.add('active');
-});
-
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Remove active class from all buttons
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        // Add active class to clicked button
-        button.classList.add('active');
-        
-        const category = button.dataset.category;
-        
+    // Tampilkan semua card secara default saat halaman dimuat
+    window.addEventListener('DOMContentLoaded', () => {
         portfolioCards.forEach(card => {
-            if (category === 'all' || card.dataset.category === category) {
-                card.style.display = 'block';
-                setTimeout(() => {
-                    card.classList.add('visible');
-                }, 50);
-            } else {
-                card.classList.remove('visible');
-                setTimeout(() => {
-                    card.style.display = 'none';
-                }, 300);
-            }
+            card.style.display = 'block';
+            card.classList.add('visible');
+        });
+        
+        // Aktifkan tombol 'all' secara default
+        document.querySelector('.filter-btn[data-category="all"]').classList.add('active');
+    });
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            const category = button.dataset.category;
+            
+            portfolioCards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, 50);
+                } else {
+                    card.classList.remove('visible');
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
         });
     });
-});
     
     // Video Modal Functionality
     const videoModal = document.querySelector('.video-modal');
@@ -254,23 +254,45 @@ filterButtons.forEach(button => {
         });
     }
     
-    // Form submission
+    // WhatsApp Form Submission
     const contactForm = document.getElementById('contact-form');
     
+if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
         // Get form values
-        const formData = {
-            name: this.name.value,
-            email: this.email.value,
-            phone: this.phone.value,
-            message: this.message.value
-        };
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
         
-        // Here you would normally send the form data to a server
-        // For demo purposes, we'll just show an alert
-        alert(`Terima kasih ${formData.name}! Pesan Anda telah terkirim. Kami akan segera menghubungi Anda via WhatsApp.`);
+        // Format WhatsApp message
+        const whatsappMessage = `Halo BEZN STUDIO, saya ${name}.\n\nEmail: ${email}\nNomor Telepon: ${phone}\n\nPesan: ${message}`;
+        
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+        
+        // Replace with your WhatsApp number (format: country code + number without 0 or +)
+        const whatsappNumber = "6285198643588"; // Contoh: 628 untuk Indonesia diikuti nomor
+        
+        // Create WhatsApp URL
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        
+        // Show success popup with checkmark animation
+        const successPopup = document.getElementById('success-popup');
+        if (successPopup) {
+            successPopup.style.display = 'flex';
+            
+            // Hide popup after 2 seconds and then open WhatsApp
+            setTimeout(() => {
+                successPopup.style.display = 'none';
+                window.open(whatsappUrl, '_blank');
+            }, 2000);
+        } else {
+            // If no popup, open WhatsApp immediately
+            window.open(whatsappUrl, '_blank');
+        }
         
         // Reset form
         this.reset();
@@ -279,16 +301,37 @@ filterButtons.forEach(button => {
         document.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
             input.blur();
         });
-        
-        // Reset labels
-        document.querySelectorAll('.form-group label').forEach(label => {
-            label.style.top = '15px';
-            label.style.left = '45px';
-            label.style.fontSize = '1rem';
-            label.style.color = 'var(--secondary)';
-            label.style.background = 'transparent';
-            label.style.padding = '0';
+    });
+}
+
+const elements = document.querySelectorAll('[data-scroll="fade-in"]');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        elements.forEach(el => observer.observe(el));
+    
+    // Popup functionality
+    const closePopup = document.querySelector('.close-popup');
+    if (closePopup) {
+        closePopup.addEventListener('click', function() {
+            const successPopup = document.getElementById('success-popup');
+            if (successPopup) {
+                successPopup.style.display = 'none';
+            }
         });
+    }
+    
+    // Close popup when clicking outside
+    window.addEventListener('click', function(event) {
+        const popup = document.getElementById('success-popup');
+        if (popup && event.target === popup) {
+            popup.style.display = 'none';
+        }
     });
     
     // Smooth scrolling for anchor links
