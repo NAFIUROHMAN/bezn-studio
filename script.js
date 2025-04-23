@@ -274,7 +274,7 @@ if (contactForm) {
         const encodedMessage = encodeURIComponent(whatsappMessage);
         
         // Replace with your WhatsApp number (format: country code + number without 0 or +)
-        const whatsappNumber = "6285198643588"; // Contoh: 628 untuk Indonesia diikuti nomor
+        const whatsappNumber = "6285189643588"; // Contoh: 628 untuk Indonesia diikuti nomor
         
         // Create WhatsApp URL
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
