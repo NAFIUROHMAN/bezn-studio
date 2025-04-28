@@ -1160,6 +1160,10 @@ footer {
     .slider-controls {
         margin-top: 1rem;
     }
+
+     .vision-mission-container {
+        display: grid;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1188,5 +1192,9 @@ footer {
     
     .social-links {
         justify-content: center;
+    }
+
+     .vision-mission-container {
+        display: grid;
     }
 }
