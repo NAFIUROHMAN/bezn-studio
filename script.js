@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 videoTitle.textContent = card.querySelector('.card-info h3').textContent;
                 videoClient.textContent = card.querySelector('.card-info p').textContent;
-                videoDesc.textContent = "Deskripsi lengkap proyek ini akan ditampilkan di sini.";
+                videoDesc.textContent = "Hadapi tantangan digital dengan solusi tepat! Klik tombol di bawah untuk konsultasi gratis dan temukan paket yang sesuai kebutuhan bisnismu.";
                 
                 videoModal.classList.add('active');
                 document.body.style.overflow = 'hidden';
@@ -356,3 +356,4 @@ const elements = document.querySelectorAll('[data-scroll="fade-in"]');
         handleScrollAnimation();
     });
 });
+
