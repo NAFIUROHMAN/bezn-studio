@@ -211,6 +211,8 @@ body {
     }
 }
 
+
+
 /* About Section */
 .about-brief {
     padding: 5rem 2rem;
@@ -224,7 +226,7 @@ body {
 
 .section-title {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 3rem;
     color: var(--primary);
     position: relative;
@@ -249,21 +251,22 @@ body {
 }
 
 .vision-mission-container {
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minimax(300px, 1fr));
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr);
     gap: 2rem;
     margin-top: 3rem;
 }
 
-.vision, .mission-slide {
+.vision,
+.mission-slide {
     padding: 2rem;
     border-radius: 10px;
-    background-color: white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
 
-.vision:hover, .mission-slide:hover {
+.vision:hover,
+.mission-slide:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
@@ -276,40 +279,42 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-  }
-  
-  .mission-slides {
+}
+
+.mission-slides {
     display: flex;
     transition: transform 0.5s ease;
-  }
-  
-  .mission-slide {
+}
+
+.mission-slide {
     min-width: 100%;
     padding: 2rem;
     background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
     border-radius: 10px;
-  }
-  
-  .mission-nav {
+}
+
+.mission-nav {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
     gap: 0.5rem;
-  }
-  
-  .mission-dot {
+}
+
+.mission-dot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
     background-color: #CBD5E0;
     cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .mission-dot.active {
+    transition: all 0.2s ease;
+}
+
+.mission-dot.active {
     background-color: var(--accent);
     transform: scale(1.2);
-  }
+    width: 10px;
+    height: 10px;
+}
 
 /* Portfolio Section */
 .portfolio-section {
@@ -771,8 +776,8 @@ body {
 }
 
 .slider-dot {
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background-color: #CBD5E0;
     cursor: pointer;
@@ -781,6 +786,8 @@ body {
 
 .slider-dot.active {
     background-color: var(--accent);
+    width: 10px;
+    height: 10px;
 }
 
 /* Contact Form */
@@ -1161,9 +1168,10 @@ footer {
         margin-top: 1rem;
     }
 
-     .vision-mission-container {
+    .vision-mission-container {
         display: grid;
     }
+    
 }
 
 @media (max-width: 480px) {
@@ -1194,7 +1202,7 @@ footer {
         justify-content: center;
     }
 
-     .vision-mission-container {
+    .vision-mission-container {
         display: grid;
     }
 }
