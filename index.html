@@ -1,448 +1,465 @@
 <!DOCTYPE html>
 <html lang="id">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Bezn Studio - Solusi kreatif untuk identitas digital Anda dari desain hingga digitalisasi">
-        <title>Bezn Studio | IT & Digitalisasi</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-<body>
-    <header id="main-header">
-        <img src="logo/logo-bezn.png" alt="Bezn Studio" class="header-logo">
-        <h2 class="header-title">Bezn</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bezn Studio - Solusi kreatif untuk identitas digital Anda dari desain hingga digitalisasi">
+    <title>Bezn Studio | IT & Digitalisasi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    
+</head>
+<body class="bg-white text-gray-800">
+    <header id="main-header" class="fixed w-full bg-white shadow-md z-50 py-4 px-6 flex items-center">
+        <img src="logo/logo-bezn.png" alt="Bezn Studio" class="h-10">
+        <h2 class="ml-2 text-xl font-bold text-purple-800">Bezn</h2>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-           <center><img src="logo/logo-cover.png" alt="Logo cover Bezn" data-scroll="fade-in"></center>
-            <h1 data-scroll="slide-right">Temukan Semua Solusi Digital Yang Kamu Butuhkan di BEZN Studio</h1>
-            <p class="subheadline" data-scroll="slide-left">Solusi Lengkap Untuk Semua Kebutuhan Digitalmu</p>
-            <a href="https://wa.me/6285189643588" class="cta-button" data-scroll="fade-in">Konsultasi Sekarang</a>
+    <section class="hero relative min-h-screen flex items-center justify-center pt-20 pb-20 overflow-hidden" id="home">
+        <div class="hero-content container mx-auto px-6 text-center z-10">
+           <center><img src="logo/logo-cover.png" alt="Logo cover Bezn" class="mx-auto mb-8 max-w-xs md:max-w-md" data-scroll="fade-in"></center>
+            <h1 class="text-3xl md:text-5xl font-bold mb-6 max-w-3xl mx-auto" data-scroll="slide-right">Temukan Semua Solusi Digital Yang Kamu Butuhkan di BEZN Studio</h1>
+            <p class="subheadline text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto" data-scroll="slide-left">Solusi Lengkap Untuk Semua Kebutuhan Digitalmu</p>
+            <a href="https://wa.me/6285189643588" class="cta-button inline-block bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105" data-scroll="fade-in">Konsultasi Sekarang</a>
         </div>
-        <div class="hero-pattern"></div>
-        <div class="scroll-down">
+        <div class="hero-pattern absolute inset-0 z-0"></div>
+        <div class="scroll-down text-purple-700 text-2xl z-10">
             <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
-    <section class="about-brief" id="about">
-        <div class="about-container">
-            <h1 class="section-title" data-scroll="fade-in">Kenapa <span style="color: #4A5568;">BEZN Studio</span></h1>
-            <p class="about-content" data-scroll="fade-in">
+    <section class="about-brief py-20 bg-gray-50" id="about">
+        <div class="about-container container mx-auto px-6">
+            <h1 class="section-title text-3xl md:text-4xl font-bold text-center mb-12" data-scroll="fade-in">Kenapa <span class="text-gray-600">BEZN Studio?</span></h1>
+            <p class="about-content text-lg text-center max-w-3xl mx-auto mb-16" data-scroll="fade-in">
                 Bezn Studio hadir sebagai solusi lengkap untuk berbagai kebutuhan digital Anda. Kami menyediakan layanan yang dirancang untuk membantu personal, bisnis, maupun UMKM agar dapat berkembang secara kreatif dan profesional di era digital.
             </p>
-            
-            <div class="vision-mission-container" data-scroll="fade-in">
-                <div class="vision">
-                    <h4>Visi</h4>
-                    <p>"Sebagai pusat solusi digital terintegrasi, kami menghadirkan pendekatan kreatif, inovasi disruptif, dan eksekusi presisi - melahirkan karya mutakhir bernafaskan modern-minimalis yang memberikan dampak transformatif bagi bisnis dan kehidupan digital individu."</p>
-                </div>
-                
-                <div class="mission-slider">
-                    <div class="mission-slides">
-                        <div class="mission-slide active">
-                            <h4>Misi 1</h4>
-                            <p>"Menjadi jembatan multidisiplin yang menghubungkan seluruh aspek industri digital - dari desain, pengembangan, hingga strategi - dalam satu ekosistem terpadu untuk menciptakan solusi holistik."</p>
-                        </div>
-                        <div class="mission-slide">
-                            <h4>Misi 2</h4>
-                            <p>"Secara proaktif mengadopsi dan mengadaptasi teknologi/trend terbaru tanpa kehilangan identitas modern-minimalis, melalui sistem pembelajaran berkelanjutan dan eksperimen terukur."</p>
-                        </div>
-                        <div class="mission-slide">
-                            <h4>Misi 3</h4>
-                            <p>"Memelopori pendekatan lean digital dimana setiap komponen (kode, desain, konten) harus memiliki tujuan fungsional dan estetika yang jelas, meminimalisir redundansi."</p>
-                        </div>
-                    </div>
-                    <div class="mission-nav">
-                        <span class="mission-dot active"></span>
-                        <span class="mission-dot"></span>
-                        <span class="mission-dot"></span>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio-section" id="portfolio">
-        <div class="container">
-            <h2 class="section-title" data-scroll="fade-in">Proyek Unggulan Kami</h2>
+    <section class="services-section py-20 bg-white" id="services">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-3xl md:text-4xl font-bold text-center mb-12" data-scroll="fade-in">Layanan Kami</h2>
             
-            <div class="portfolio-filter" data-scroll="fade-in">
-                <button class="filter-btn" data-category="videography">Videografi</button>
-                <button class="filter-btn" data-category="photography">Fotografi</button>
-                <button class="filter-btn" data-category="design">Desain Grafis</button>
-                <button class="filter-btn" data-category="uiux">UI / UX</button>
-                <button class="filter-btn" data-category="Website">Website</button>
-            </div>
-            
-            <div class="portfolio-grid" data-scroll="fade-in">
-                <!-- Item 1 - Videografi -->
-                <div class="portfolio-card" data-category="videography">
-                    <div class="card-image">
-                        <div class="video-thumbnail">
-                            <video muted loop class="portfolio-video">
-                                <source src="portofolio/video/1.mp4" type="video/mp4">
-                            </video>
-                            <div class="play-button">
-                                <i class="fas fa-play"></i>
-                            </div>
+            <div class="services-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-scroll="fade-in">
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="p-6">
+                        <div class="service-icon bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-paint-brush text-purple-700 text-2xl"></i>
                         </div>
-                        <span class="category-badge">Videografi</span>
-                    </div>
-                    <div class="card-info">
-                        <h3>Video Film Pendek</h3>
-                        <p>Tata Busana SMKN Rengel 2025</p>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Desain & Branding</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-700 mt-1 mr-2 text-sm"></i>
+                                <span>Desain logo dan identitas visual</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-700 mt-1 mr-2 text-sm"></i>
+                                <span>Desain kemasan produk</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-700 mt-1 mr-2 text-sm"></i>
+                                <span>Desain konten media sosial</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-700 mt-1 mr-2 text-sm"></i>
+                                <span>Desain presentasi dan company profile</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 
-                <!-- Item 2 - Videografi -->
-                <div class="portfolio-card" data-category="videography">
-                    <div class="card-image">
-                        <div class="video-thumbnail">
-                            <video muted loop class="portfolio-video">
-                                <source src="portofolio/video/2.mp4" type="video/mp4">
-                            </video>
-                            <div class="play-button">
-                                <i class="fas fa-play"></i>
-                            </div>
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="p-6">
+                        <div class="service-icon bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-globe text-purple-700 text-2xl"></i>
                         </div>
-                        <span class="category-badge">Videografi</span>
-                    </div>
-                    <div class="card-info">
-                        <h3>Video Kenangan Kelas 12</h3>
-                        <p>SMKN Rengel - Tuban</p>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Website & Aplikasi</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-700 mt-1 mr-2 text-sm"></i>
+                                <span>Undangan digital</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-700 mt-1 mr-2 text-sm"></i>
+                                <span>Pembuatan landing page</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-700 mt-1 mr-2 text-sm"></i>
+                                <span>Website company profile</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-700 mt-1 mr-2 text-sm"></i>
+                                <span>UI/UX Design untuk web/app</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 
-                <!-- Item 3 - Fotografi -->
-                <div class="portfolio-card" data-category="photography">
-                    <div class="card-image">
-                        <img src="portofolio/foto/1.png" alt="Proyek Fotografi">
-                        <span class="category-badge">Fotografi</span>
-                    </div>
-                    <div class="card-info">
-                        <h3>Foto Bersama</h3>
-                        <p>Momen konyol, canda tawa, dan kebersamaan yang nggak bisa diulang</p>
-                        <button class="view-details">Lihat Detail</button>
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="p-6">
+                        <div class="service-icon bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-video text-purple-700 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Konten Kreatif</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-700 mt-1 mr-2 text-sm"></i>
+                                <span>Undangan digital</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-700 mt-1 mr-2 text-sm"></i>
+                                <span>Editing video profesional</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-700 mt-1 mr-2 text-sm"></i>
+                                <span>Konten media sosial</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-purple-700 mt-1 mr-2 text-sm"></i>
+                                <span>Fotografi produk</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+                </div>
+        </div>
+    </section>
 
-                <div class="portfolio-card" data-category="photography">
-                    <div class="card-image">
-                        <img src="portofolio/foto/2.png" alt="Proyek Fotografi">
-                        <span class="category-badge">Fotografi</span>
-                    </div>
-                    <div class="card-info">
-                        <h3>Foto Bersama</h3>
-                        <p>Dari pose kaku sampai canda natural, semua momen jujur kalian akan jadi kenangan berharga</p>
-                        <button class="view-details">Lihat Detail</button>
-                    </div>
-                </div>
+    <section class="middle-cta py-16 bg-purple-700 text-white" data-scroll="fade-in">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">Ada masalah yang bisa diatasi dengan digital? Kami bantu!</h2>
+            <a href="https://wa.me/6285189643588" class="cta-button whatsapp-btn inline-block bg-white text-purple-700 font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Tanya dulu yuk di WhatsApp <i class="fab fa-whatsapp ml-2"></i></a>
+        </div>
+    </section>
 
-                <div class="portfolio-card" data-category="photography">
-                    <div class="card-image">
-                        <img src="portofolio/foto/3.png" alt="Proyek Fotografi">
-                        <span class="category-badge">Fotografi</span>
-                    </div>
-                    <div class="card-info">
-                        <h3>Foto Wisuda</h3>
-                        <p>Foto wisuda bukan sekadar dokumentasi, tapi cerita tentang perjalanan yang akhirnya sampai di titik ini</p>
-                        <button class="view-details">Lihat Detail</button>
-                    </div>
-                </div>
-                
-               <!-- Item 4 - Desain Grafis -->
-                <div class="portfolio-card" data-category="design">
-                    <div class="card-image">
-                        <img src="portofolio/desain/1.png" alt="Proyek Desain">
-                        <span class="category-badge">Desain Grafis</span>
-                    </div>
-                    <div class="card-info">
-                        <h3>Desain Logo</h3>
-                        <p>Logo yang memancarkan esensi kecantikan yang unik</p>
-                        <button class="view-details">Lihat Detail</button>
-                    </div>
-                </div>
-
-                <div class="portfolio-card" data-category="design">
-                    <div class="card-image">
-                        <img src="portofolio/desain/2.png" alt="Proyek Desain">
-                        <span class="category-badge">Desain Grafis</span>
-                    </div>
-                    <div class="card-info">
-                        <h3>Desain Feed Hari Besar Nasional</h3>
-                        <p>Bikin feed IG hari besar di hari spesial!</p>
-                        <button class="view-details">Lihat Detail</button>
-                    </div>
-                </div>
-
-                <div class="portfolio-card" data-category="design">
-                    <div class="card-image">
-                        <img src="portofolio/desain/3.png" alt="Proyek Desain">
-                        <span class="category-badge">Desain Grafis</span>
-                    </div>
-                    <div class="card-info">
-                        <h3>Desain Feed Hari Besar Nasional</h3>
-                        <p>Bikin feed IG hari besar di hari spesial!</p>
-                        <button class="view-details">Lihat Detail</button>
-                    </div>
-                </div>
-
-                <!--UI / UX-->
-                <div class="portfolio-card" data-category="uiux">
-                    <div class="card-image">
-                        <img src="portofolio/uiux/1.png" alt="Proyek UI/UX">
-                        <span class="category-badge">UI / UX</span>
-                    </div>
-                    <div class="card-info">
-                        <h3>Desain UI / UX yang user friendly</h3>
-                        <p>Mobile Apps Travelling Yang Mengutamakan Kbebasan Dengan Desain Yang User friendly <a href="https://www.figma.com/proto/2NUpRw144Wyj8ezPJepPgH/PROJEK-UAS--D.-TRAVEL-IN-?node-id=28-284&t=xawPtbR0k6J0tHYB-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A2"><span style="color: blueviolet;">Mau Coba?</span></a></p>
-                        <button class="view-details">Lihat Detail</button>
-                    </div>
-                </div>
-
-                <!--website-->
-                <div class="portfolio-card" data-category="Website">
-                    <div class="card-image">
-                        <img src="portofolio/website/1.png" alt="Website">
-                        <span class="category-badge">Website</span>
-                    </div>
-                    <div class="card-info">
-                        <h3>Website CashFlow</h3>
-                        <p>Website Pengelola Uang, Untuk Melihat Aliran Uang</p>
-                        <button class="view-details">Lihat Detail</button>
-                    </div>
-                </div>
-            
+    <section class="packages-section py-16 md:py-20 bg-gray-50" id="packages">
+        <div class="container mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12" data-scroll="fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Paket Bundling Kami</h2>
+                <p class="text-lg text-gray-600">Solusi lengkap untuk kebutuhan digital bisnis Anda</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Middle CTA -->
-    <section class="middle-cta" data-scroll="fade-in">
-        <div class="container">
-            <h2>Ada masalah yang bisa diatasi dengan digital? Kami bantu!</h2>
-            <a href="https://wa.me/6285189643588" class="cta-button whatsapp-btn">Tanya dulu yuk di WhatsApp <i class="fab fa-whatsapp"></i></a>
-        </div>
-    </section>
-
-    <!-- Packages Section -->
-    <section class="packages-section" id="packages">
-        <div class="container">
-            <h2 class="section-title" data-scroll="fade-in">Paket Bundling Kami</h2>
-            <p class="section-subtitle" data-scroll="fade-in">Solusi lengkap untuk kebutuhan digital bisnis Anda</p>
             
-            <div class="packages-container" data-scroll="fade-in">
-                <div class="packages-slider">
-                    <div class="packages-slides">
-                        <!-- Starter Pack -->
-                        <div class="package-slide">
-                            <div class="package-card">
-                                <div class="package-header">
-                                    <h3>Starter Pack</h3>
-                                    <div class="price">Rp100.000</div>
+            <div class="packages-container relative" data-scroll="fade-in">
+                <!-- Slider container with improved accessibility -->
+                <div class="swiper-container packages-slider" aria-label="Daftar paket layanan">
+                    <div class="swiper-wrapper">
+                        <!-- Package 1 - Starter -->
+                        <div class="swiper-slide">
+                            <div class="package-card bg-white rounded-xl shadow-sm hover:shadow-md p-6 h-full flex flex-col transition-all duration-300 border border-gray-100">
+                                <div class="package-header mb-6">
+                                    <h3 class="text-xl font-bold text-gray-800">Starter Pack</h3>
+                                    <div class="price text-2xl font-bold text-purple-700 mt-2">Rp100.000</div>
                                 </div>
-                                <ul class="package-features">
-                                    <li><i class="fas fa-check"></i> Logo simple</li>
-                                    <li><i class="fas fa-check"></i> 3 feed desain IG</li>
-                                    <li><i class="fas fa-check"></i> 1x revisi</li>
+                                <ul class="package-features space-y-3 mb-8 flex-grow">
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-purple-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Logo simple</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-purple-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">3 feed desain IG</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-purple-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">1x revisi</span>
+                                    </li>
                                 </ul>
-                                <a href="https://wa.me/6285189643588?text=Halo%20BEZN%20STUDIO%20Saya%20tertarik%20dengan%20paket%20Starter%20Pack" class="package-cta">Pilih Paket</a>
+                                <a href="https://wa.me/6285189643588?text=Halo%20BEZN%20STUDIO%20Saya%20tertarik%20dengan%20paket%20Starter%20Pack" 
+                                   class="package-cta mt-auto w-full bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 px-6 rounded-lg text-center transition duration-300 focus:outline-none focus:ring-2 focus:ring-purple-700 focus:ring-opacity-50"
+                                   aria-label="Pilih paket Starter Pack">
+                                    Pilih Paket
+                                </a>
                             </div>
                         </div>
                         
-                        <!-- Basic Digital -->
-                        <div class="package-slide">
-                            <div class="package-card popular">
-                                <div class="popular-badge">POPULER</div>
-                                <div class="package-header">
-                                    <h3>Basic Digital</h3>
-                                    <div class="price">Rp500.000</div>
+                        <!-- Package 2 - Basic Digital (Popular) -->
+                        <div class="swiper-slide">
+                            <div class="package-card bg-white rounded-xl shadow-sm hover:shadow-md p-6 h-full flex flex-col transition-all duration-300 border-2 border-purple-700 relative">
+                                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-purple-700 text-white text-xs font-bold px-3 py-1 rounded-full z-10">
+                                    POPULER
                                 </div>
-                                <ul class="package-features">
-                                    <li><i class="fas fa-check"></i> Logo sederhana</li>
-                                    <li><i class="fas fa-check"></i> Desain feed 6 post</li>
-                                    <li><i class="fas fa-check"></i> Landing page sederhana</li>
-                                    <li><i class="fas fa-check"></i> 2x revisi</li>
+                                <div class="package-header mb-6 mt-2">
+                                    <h3 class="text-xl font-bold text-gray-800">Basic Digital</h3>
+                                    <div class="price text-2xl font-bold text-purple-700 mt-2">Rp500.000</div>
+                                </div>
+                                <ul class="package-features space-y-3 mb-8 flex-grow">
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-purple-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Logo sederhana</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-purple-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Desain feed 6 post</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-purple-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Landing page sederhana</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-purple-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">2x revisi</span>
+                                    </li>
                                 </ul>
-                                <a href="https://wa.me/6285189643588?text=Halo%20BEZN%20STUDIO%20Saya%20tertarik%20dengan%20paket%20Basic%20Digital" class="package-cta">Pilih Paket</a>
+                                <a href="https://wa.me/6285189643588?text=Halo%20BEZN%20STUDIO%20Saya%20tertarik%20dengan%20paket%20Basic%20Digital" 
+                                   class="package-cta mt-auto w-full bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 px-6 rounded-lg text-center transition duration-300 focus:outline-none focus:ring-2 focus:ring-purple-700 focus:ring-opacity-50"
+                                   aria-label="Pilih paket Basic Digital">
+                                    Pilih Paket
+                                </a>
                             </div>
                         </div>
                         
-                        <!-- Website Presence -->
-                        <div class="package-slide">
-                            <div class="package-card">
-                                <div class="package-header">
-                                    <h3>Website Presence</h3>
-                                    <div class="price">Rp1.300.000</div>
+                        <!-- Package 3 - Website Presence -->
+                        <div class="swiper-slide">
+                            <div class="package-card bg-white rounded-xl shadow-sm hover:shadow-md p-6 h-full flex flex-col transition-all duration-300 border border-gray-100">
+                                <div class="package-header mb-6">
+                                    <h3 class="text-xl font-bold text-gray-800">Website Presence</h3>
+                                    <div class="price text-2xl font-bold text-purple-700 mt-2">Rp1.300.000</div>
                                 </div>
-                                <ul class="package-features">
-                                    <li><i class="fas fa-check"></i> Logo</li>
-                                    <li><i class="fas fa-check"></i> Landing page Menarik</li>
-                                    <li><i class="fas fa-check"></i> Desain 10 post IG</li>
-                                    <li><i class="fas fa-check"></i> 3x revisi</li>
+                                <ul class="package-features space-y-3 mb-8 flex-grow">
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-purple-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Logo</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-purple-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Landing page Menarik</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-purple-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Desain 10 post IG</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-purple-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">3x revisi</span>
+                                    </li>
                                 </ul>
-                                <a href="https://wa.me/6285189643588?text=Halo%20BEZN%20STUDIO%20Saya%20tertarik%20dengan%20paket%20Website%20Presence" class="package-cta">Pilih Paket</a>
+                                <a href="https://wa.me/6285189643588?text=Halo%20BEZN%20STUDIO%20Saya%20tertarik%20dengan%20paket%20Website%20Presence" 
+                                   class="package-cta mt-auto w-full bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 px-6 rounded-lg text-center transition duration-300 focus:outline-none focus:ring-2 focus:ring-purple-700 focus:ring-opacity-50"
+                                   aria-label="Pilih paket Website Presence">
+                                    Pilih Paket
+                                </a>
                             </div>
                         </div>
-                        
-                        <!-- Growth Pack -->
-                        <div class="package-slide">
-                            <div class="package-card">
-                                <div class="package-header">
-                                    <h3>Growth Pack</h3>
-                                    <div class="price">Rp2.250.000</div>
+    
+                        <!-- Package 4 - Growth Pack -->
+                        <div class="swiper-slide">
+                            <div class="package-card bg-white rounded-xl shadow-sm hover:shadow-md p-6 h-full flex flex-col transition-all duration-300 border border-gray-100">
+                                <div class="package-header mb-6">
+                                    <h3 class="text-xl font-bold text-gray-800">Growth Pack</h3>
+                                    <div class="price text-2xl font-bold text-purple-700 mt-2">Rp2.250.000</div>
                                 </div>
-                                <ul class="package-features">
-                                    <li><i class="fas fa-check"></i> Logo</li>
-                                    <li><i class="fas fa-check"></i> Website sederhana</li>
-                                    <li><i class="fas fa-check"></i> Pengelolaan konten IG 1 bulan</li>
-                                    <li><i class="fas fa-check"></i> 4x revisi</li>
+                                <ul class="package-features space-y-3 mb-8 flex-grow">
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-purple-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Logo</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-purple-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Website sederhana</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-purple-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Pengelolaan konten IG 1 bulan</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-purple-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">4x revisi</span>
+                                    </li>
                                 </ul>
-                                <a href="https://wa.me/6285189643588?text=Halo%20BEZN%20STUDIO%20Saya%20tertarik%20dengan%20paket%20Growth%20Pack" class="package-cta">Pilih Paket</a>
+                                <a href="https://wa.me/6285189643588?text=Halo%20BEZN%20STUDIO%20Saya%20tertarik%20dengan%20paket%20Growth%20Pack" 
+                                   class="package-cta mt-auto w-full bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 px-6 rounded-lg text-center transition duration-300 focus:outline-none focus:ring-2 focus:ring-purple-700 focus:ring-opacity-50"
+                                   aria-label="Pilih paket Growth Pack">
+                                    Pilih Paket
+                                </a>
                             </div>
                         </div>
-                        
-                        <!-- Professional Pack -->
-                        <div class="package-slide">
-                            <div class="package-card">
-                                <div class="package-header">
-                                    <h3>Professional Pack</h3>
-                                    <div class="price">Rp4.500.000</div>
+    
+                        <!-- Package 5 - Professional Pack -->
+                        <div class="swiper-slide">
+                            <div class="package-card bg-white rounded-xl shadow-sm hover:shadow-md p-6 h-full flex flex-col transition-all duration-300 border border-gray-100">
+                                <div class="package-header mb-6">
+                                    <h3 class="text-xl font-bold text-gray-800">Professional Pack</h3>
+                                    <div class="price text-2xl font-bold text-purple-700 mt-2">Rp4.500.000</div>
                                 </div>
-                                <ul class="package-features">
-                                    <li><i class="fas fa-check"></i> Logo</li>
-                                    <li><i class="fas fa-check"></i>website</li>
-                                    <li><i class="fas fa-check"></i> Konten IG 2 bulan</li>
-                                    <li><i class="fas fa-check"></i> 5x revisi</li>
+                                <ul class="package-features space-y-3 mb-8 flex-grow">
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-purple-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Logo</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-purple-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Website</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-purple-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Konten IG 2 bulan</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="w-5 h-5 text-purple-700 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">5x revisi</span>
+                                    </li>
                                 </ul>
-                                <a href="https://wa.me/6285189643588?text=Halo%20BEZN%20STUDIO%20Saya%20tertarik%20dengan%20paket%20Professional%20Pack" class="package-cta">Pilih Paket</a>
+                                <a href="https://wa.me/6285189643588?text=Halo%20BEZN%20STUDIO%20Saya%20tertarik%20dengan%20paket%20Professional%20Pack" 
+                                   class="package-cta mt-auto w-full bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 px-6 rounded-lg text-center transition duration-300 focus:outline-none focus:ring-2 focus:ring-purple-700 focus:ring-opacity-50"
+                                   aria-label="Pilih paket Professional Pack">
+                                    Pilih Paket
+                                </a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="slider-controls">
-                    <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
-                    <div class="slider-dots"></div>
-                    <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+                    
+                    <!-- Pagination and Navigation -->
+                    <div class="swiper-pagination packages-dots mt-6 !bottom-0"></div>
+                    <div class="swiper-button-next hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-md text-purple-700 hover:bg-purple-50 focus:outline-none focus:ring-2 focus:ring-purple-700 focus:ring-opacity-50" aria-label="Slide berikutnya"></div>
+                    <div class="swiper-button-prev hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-md text-purple-700 hover:bg-purple-50 focus:outline-none focus:ring-2 focus:ring-purple-700 focus:ring-opacity-50" aria-label="Slide sebelumnya"></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Form -->
-    <section class="contact-section" id="contact">
-        <div class="container">
-            <h2 class="section-title" data-scroll="fade-in">Tertarik Kerja Sama?</h2>
-            <p class="section-subtitle" data-scroll="fade-in">Isi form berikut dan kami akan segera menghubungi Anda</p>
-            
-            <form id="contact-form" class="contact-form" data-scroll="fade-in" onsubmit="sendToWhatsApp(event)">
+    <section class="contact-section py-20 bg-white" id="contact">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-3xl md:text-4xl font-bold text-center mb-4" data-scroll="fade-in">Tertarik Kerja Sama?</h2>
+            <p class="section-subtitle text-lg text-center text-gray-600 mb-12" data-scroll="fade-in">Isi form berikut dan kami akan segera menghubungi Anda</p>
+            <form id="contact-form" class="contact-form max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg" data-scroll="fade-in" onsubmit="sendToWhatsApp(event)">
                 <div class="form-group">
                     <i class="fas fa-user"></i>
                     <input type="text" id="name" name="name" required placeholder=" ">
                     <label for="name">Nama Lengkap</label>
                 </div>
-                
                 <div class="form-group">
                     <i class="fas fa-envelope"></i>
                     <input type="email" id="email" name="email" required placeholder=" ">
                     <label for="email">Alamat Email</label>
                 </div>
-                
                 <div class="form-group">
                     <i class="fas fa-phone"></i>
                     <input type="tel" id="phone" name="phone" required placeholder=" ">
                     <label for="phone">Nomor Telepon</label>
                 </div>
-                
                 <div class="form-group textarea-group">
                     <i class="fas fa-comment-dots"></i>
                     <textarea id="message" name="message" required placeholder=" "></textarea>
                     <label for="message">Keperluan Anda</label>
                 </div>
-                
-                <button type="submit" class="submit-btn">Kirim Sekarang</button>
-                
-                <p class="form-note">Kami akan menghubungi anda dalam 1x24 jam</p>
+                <button type="submit" class="submit-btn w-full bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">Kirim Sekarang</button>
+                <p class="form-note text-center text-gray-500 text-sm mt-4">Kami akan menghubungi anda dalam 1x24 jam</p>
             </form>
         </div>
     </section>
 
-    <div id="success-popup">
-        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-            <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
-            <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
-        </svg>
+    <div id="success-popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-lg shadow-xl text-center">
+            <svg class="checkmark mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52" style="width: 80px; height: 80px;">
+                <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+            <h3 class="text-xl font-bold text-purple-700 mt-4">Pesan Terkirim!</h3>
+            <p class="text-gray-600 mt-2">Terima kasih, kami akan segera menghubungi Anda.</p>
+        </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>BEZN Studio</h3>
-                    <p>Solusi Lengkap Untuk Semua Kebutuhan Digitalmu</p>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Tautan Cepat</h4>
-                    <ul>
-                        <li><a href="#portfolio">Portofolio</a></li>
-                        <li><a href="#packages">Paket Layanan</a></li>
-                        <li><a href="#about">Tentang Kami</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-contact">
-                    <h4>Hubungi Kami</h4>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> beznstudio@gmail.com</li>
-                        <li><i class="fas fa-phone"></i> <a href="https://wa.me/6285189643588">+62 851-8964-3588</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i> Surabaya - Tuban, Indonesia</li>
-                    </ul>
-                </div>
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="footer-brand mb-8 md:mb-0">
+                <h3 class="text-2xl font-bold text-white mb-4">BEZN Studio</h3>
+                <p class="text-gray-400">Solusi Lengkap Untuk Semua Kebutuhan Digitalmu</p>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 Bezn Studio. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/bezn.studio?igsh=MWkzcXh3ZGFhdjYzYw=="><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/6285189643588"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.linkedin.com/in/m-nafiurohman-b93a09288/"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.tiktok.com/@bezn.studio?_t=ZS-8vkSv7ovyUe&_r=1"><i class="fab fa-tiktok"></i></a>
-                </div>
+            <div class="footer-links mb-8 md:mb-0">
+                <h4 class="text-xl font-semibold text-white mb-4">Tautan Cepat</h4>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="text-gray-400 hover:text-white transition">Beranda</a></li>
+                    <li><a href="#about" class="text-gray-400 hover:text-white transition">Tentang Kami</a></li>
+                    <li><a href="#services" class="text-gray-400 hover:text-white transition">Layanan Kami</a></li>
+                    <li><a href="#packages" class="text-gray-400 hover:text-white transition">Paket</a></li>
+                    <li><a href="#contact" class="text-gray-400 hover:text-white transition">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4 class="text-xl font-semibold text-white mb-4">Hubungi Kami</h4>
+                <ul class="space-y-2">
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope mr-3 text-gray-400"></i>
+                        <a href="mailto:bezn.studio@gmail.com" class="text-gray-400 hover:text-white transition">bezn.studio@gmail.com</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone mr-3 text-gray-400"></i>
+                        <a href="https://wa.me/6285189643588" class="text-gray-400 hover:text-white transition">+62 851-8964-3588</a>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-map-marker-alt mr-3 text-gray-400"></i>
+                        <span class="text-gray-400">Surabaya - Tuban, Indonesia</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom mt-12 border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center px-6 container mx-auto">
+            <p class="text-gray-500 text-sm">&copy; 2025 Bezn Studio. All rights reserved.</p>
+            <div class="social-links flex space-x-4 mt-4 md:mt-0">
+                <a href="https://www.instagram.com/bezn.studio?igsh=MWkzcXh3ZGFhdjYzYw==" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="https://wa.me/6285189643588" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/m-nafiurohman-b93a09288/" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="https://www.tiktok.com/@bezn.studio?_t=ZS-8vkSv7ovyUe&_r=1" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-tiktok text-xl"></i>
+                </a>
             </div>
         </div>
     </footer>
 
-    <!-- Video Modal -->
-    <div class="video-modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="video-container">
-                <video controls>
-                    <source src="" type="video/mp4">
-                </video>
-            </div>
-            <div class="video-details">
-                <h3 class="video-title"></h3>
-                <p class="video-client"></p>
-                <p class="video-description"></p>
-                <a href="https://wa.me/6285189643588" class="cta-button">Konsultasi Proyek Serupa</a>
-            </div>
-        </div>
-    </div>
-
-    
-    <!-- Custom Script -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
