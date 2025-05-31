@@ -26,6 +26,20 @@
             handleScrollAnimation(); // Initial check on load
         });
 
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Mobile Submenu Toggle
+        document.querySelectorAll('#mobile-menu button').forEach(button => {
+            button.addEventListener('click', function() {
+                const submenu = this.nextElementSibling;
+                submenu.classList.toggle('hidden');
+            });
+        });
+
         // Contact Form to WhatsApp
         function sendToWhatsApp(event) {
             event.preventDefault(); // Prevent default form submission
@@ -94,4 +108,59 @@
                 paginationBulletMessage: 'Beralih ke paket {{index}}'
             }
         });
+    });
+
+     // Initialize Swiper for packages slider
+     const packagesSwiper = new Swiper('.packages-slider', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        }
+    });
+
+    // FAQ toggle functionality
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            const icon = question.querySelector('i');
+            
+            answer.classList.toggle('hidden');
+            icon.classList.toggle('transform');
+            icon.classList.toggle('rotate-180');
+        });
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+        const header = document.getElementById('main-header');
+        if (window.scrollY > 50) {
+            header.classList.add('shadow-lg');
+            header.classList.add('py-3');
+            header.classList.remove('py-4');
+        } else {
+            header.classList.remove('shadow-lg');
+            header.classList.remove('py-3');
+            header.classList.add('py-4');
+        }
     });
