@@ -15,6 +15,15 @@
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <style>
+        /* Perkecil ukuran ikon panah default Swiper */
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+          font-size: 1.1rem; /* Ukuran default 1.5rem, sesuaikan sesuai kebutuhan */
+          font-weight: bold; /* Agar ikon lebih tajam */
+        }
+      </style>
     
 </head>
 <body class="bg-white text-gray-800">
@@ -116,7 +125,7 @@
                     Temukan Semua Solusi Digital Yang Kamu Butuhkan di BEZN Studio
                 </h1>
                 <p class="text-black-80 text-lg mb-6">
-                  Agensi kreatif yang siap membantu Anda mewujudkan kebutuhan digital anda, mulai dari desain grafis sampai landing page
+                  Agensi kreatif yang siap membantu mewujudkan kebutuhan digital anda, mulai dari desain grafis sampai landing page
                 </p>
                 <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
                   <a href="https://wa.me/6285189643588" class="bg-white text-purple-700 font-semibold py-3 px-6 rounded-full shadow-md hover:bg-purple-700 hover:text-white transition duration-300 flex items-center justify-center">
@@ -292,7 +301,7 @@
     <section class="whatsapp-cta py-16 bg-purple-700 text-white">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-2xl md:text-3xl font-bold mb-6">Konsultasi Gratis via WhatsApp</h2>
-            <p class="mb-8 max-w-2xl mx-auto">Diskusikan kebutuhan digital bisnis Anda dengan tim profesional kami. Tanpa biaya, tanpa kewajiban.</p>
+            <p class="mb-8 max-w-2xl mx-auto">Diskusikan kebutuhan digital Anda dengan tim profesional kami. Tanpa biaya, tanpa kewajiban.</p>
             <a href="https://wa.me/6285189643588" class="cta-button whatsapp-btn inline-block bg-white text-purple-700 font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
                 <i class="fab fa-whatsapp mr-2"></i> Chat Sekarang
             </a>
@@ -665,8 +674,8 @@
         <!-- Final CTA Section -->
         <section class="final-cta py-16 bg-purple-700 text-white">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-2xl md:text-3xl font-bold mb-6">Siap Meningkatkan Bisnis Anda?</h2>
-                <p class="mb-8 max-w-2xl mx-auto">Mulai percakapan dengan tim kami sekarang dan dapatkan solusi digital terbaik untuk kebutuhan bisnis Anda.</p>
+                <h2 class="text-2xl md:text-3xl font-bold mb-6">Butuh solusi digital?</h2>
+                <p class="mb-8 max-w-2xl mx-auto">Diskusikan kebutuhan digital Anda dengan tim profesional kami. Tanpa biaya, tanpa kewajiban.</p>
                 <a href="https://wa.me/6285189643588" class="cta-button inline-block bg-white text-purple-700 font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
                     <i class="fab fa-whatsapp mr-2"></i> Hubungi Kami Sekarang
                 </a>
@@ -709,7 +718,7 @@
                     <i class="fas fa-chevron-down text-purple-700 transition-transform duration-300"></i>
                 </button>
                 <div class="faq-answer mt-3 text-gray-600 hidden">
-                    <p>Pembayaran dilakukan secara bertahap: 50% di awal sebagai DP sebelum pengerjaan dimulai, dan 50% sisanya setelah proyek selesai dan disetujui. Kami menerima transfer bank, e-wallet, atau pembayaran digital lainnya.</p>
+                    <p>Pembayaran dilakukan secara bertahap: 50% di awal sebagai DP sebelum pengerjaan dimulai, dan 50% sisanya setelah proyek selesai dan disetujui. Untuk saat ini kami hanya menerima pembayaran melalui transfer bank melalui seabank.</p>
                 </div>
             </div>
             
@@ -747,7 +756,7 @@
                 <div class="flex items-center mb-4">
                     <img src="logo/logo-cover.png" alt="Bezn Studio" class="h-8">
                 </div>
-                <p class="text-gray-400 mb-4">Solusi kreatif untuk identitas digital Anda dari desain hingga digitalisasi.</p>
+                <p class="text-gray-400 mb-4">Solusi Lengkap Untuk Semua Kebutuhan Digital anda.</p>
                 <div class="social-links flex space-x-4">
                     <a href="https://www.instagram.com/bezn.studio?igsh=MWkzcXh3ZGFhdjYzYw=="><i class="fab fa-instagram"></i></a>
                     <a href="https://wa.me/6285189643588"><i class="fab fa-whatsapp"></i></a>
@@ -783,11 +792,11 @@
                 <ul class="space-y-2">
                     <li class="flex items-start">
                         <i class="fas fa-phone-alt text-purple-500 mt-1 mr-3"></i>
-                        <a href="tel:+6285189643588" class="text-gray-400 hover:text-white transition duration-300">+62 851-8964-3588</a>
+                        <a href="https://wa.me/6285189643588" class="text-gray-400 hover:text-white transition duration-300">+62 851-8964-3588</a>
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-envelope text-purple-500 mt-1 mr-3"></i>
-                        <a href="mailto:beznstudio@gmail.com" class="text-gray-400 hover:text-white transition duration-300">info@beznstudio.com</a>
+                        <a href="mailto:beznstudio@gmail.com" class="text-gray-400 hover:text-white transition duration-300">beznstudio@gmail.com</a>
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-map-marker-alt text-purple-500 mt-1 mr-3"></i>
